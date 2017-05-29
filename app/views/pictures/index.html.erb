@@ -19,12 +19,12 @@
       <tr>
         <td><%= picture.title %></td>
         <td><%= image_tag picture.url %></td>
-        <td><%= picture.github %></td>
+        <td><a href="<%= picture.github %>"><%= picture.github %></a></td>
         <td><%= picture.description %></td>
         <td><%= picture.likes %></td>
         <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
+        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
