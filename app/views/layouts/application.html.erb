@@ -10,15 +10,43 @@
 
   <body>
 
-    <nav class="nav navbar-default" id="login">
-      <div class="container">
-        <% if current_user %>
-      Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
-        <% else %>
-          <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup'  %>
-        <% end %>
+    <nav class="nav navbar-default navbar-fixed-top" id="login">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <a href="/">
+            <%= image_tag("logo.png", :alt => "codegram logo", class: "logo")  %>
+          </a>
+        </div>
+
+        <div id="navbar-right">
+          <% if current_user %>
+        Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+          <% else %>
+            <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup'  %>
+          <% end %>
+        </div>
+
       </div>
     </nav>
+    <!-- This is the original navbar -->
+    <!-- <nav class="nav navbar-default" id="login">
+      <div class="navbox">
+
+        <div id="navbar-left">
+          <%= image_tag("logo.png", :alt => "codegram logo", class: "logo")  %>
+        </div>
+
+        <div id="navbar-right">
+          <% if current_user %>
+        Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+          <% else %>
+            <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup'  %>
+          <% end %>
+        </div>
+
+      </div>
+    </nav> -->
 
 
 
