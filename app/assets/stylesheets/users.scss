@@ -24,14 +24,20 @@
 .form-group {
   font-size: 1.5em;
   width: 80%;
-  margin: 0 auto ;
+  margin: 20px auto ;
 }
 .btn {
   margin: 20px 0;
 }
 #login {
-  font-size: 2em;
+  font-size: 1.5em;
   height: 2em;
   background-color: white;
   text-align: right;
+}
+.label{
+  color: black;
+}
+.form-control {
+  margin-top: 10px;
 }
