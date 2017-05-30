@@ -8,19 +8,25 @@
 .navbox {
   // display: flex;
 }
+.inner-container {
+  background-color: rgba(161, 217, 255, 0.3);
+  border-radius: 5px;
+  // padding-top: 5em;
+  margin: 5em auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
 #header {
-  background-color: #1AE5FF;
-  width: 80%;
-  // height: 3em;
-  margin: 0 auto ;
+  // background-color: #A1D9FF;
+  width: 90%;
+  margin: 30px auto;
   text-align: center;
 }
-// body {
-//   color: black;
-// }
+
 .form-group {
   font-size: 1.5em;
-  width: 80%;
+  width: 90%;
   margin: 20px auto ;
 }
 .btn {
