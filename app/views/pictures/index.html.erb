@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pictures</h1>
+<!-- <img src="app/assets/images/logo.png" alt="codegram logo"> -->
 
-<table>
+
+
+
+<!-- <table>
   <thead>
     <tr>
       <th>Title</th>
@@ -12,23 +15,26 @@
       <th>Likes</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> -->
+  <div class="container main-box">
+    <div class="row">
 
-  <tbody>
-    <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= picture.title %></td>
-        <td><%= image_tag picture.url %></td>
-        <td><a href="<%= picture.github %>"><%= picture.github %></a></td>
-        <td><%= picture.description %></td>
-        <td><%= picture.likes %></td>
-        <td><%= link_to 'Show', picture %></td>
-        <!-- <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% @pictures.each do |picture| %>
+      <div class="post">
+            <%= picture.title %>
+            <%= image_tag picture.url %>
+            <!-- <a href="<%= picture.github %>"><%= picture.github %></a> -->
+            <%= picture.description %>
+            <!-- <%= picture.likes %> -->
+            <%= link_to 'Show', picture %>
+            <!-- <%= link_to 'Edit', edit_picture_path(picture) %></td>
+            <%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+          </div>
+        <% end %>
+
+    </div>
+  </div>
+
 
 <br>
 
