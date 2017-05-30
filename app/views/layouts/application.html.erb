@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>code</>gram</title>
+   
+    <title>Codegram</title>
     <%= csrf_meta_tags %>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,6 +21,8 @@
             <%= image_tag("logo.png", :alt => "codegram logo", class: "logo")  %>
           </a>
         </div>
+
+        <a class="glyphicon glyphicon-plus-sign new-pic" href="/pictures/new"></a>
 
         <div id="navbar-right">
           <% if current_user %>
