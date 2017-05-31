@@ -61,9 +61,11 @@ body {
   // border: 1px solid black;
   // box-sizing: content-box;
   width: 300px;
-  height: 200px;
-
-  margin-top: -80px;
+  height: 52px;
+  margin-top: -10px;
+}
+a:hover {
+  // opacity: .99;
 }
 #navbar-right{
   float: right;
@@ -106,9 +108,12 @@ body {
 
   // text-align: center;
 }
-img:hover {
+.post img:hover {
   opacity: 0.1; /* 1 = 100%, 0 = 0% */
   /* or the drop-shadow effect */
+  box-shadow: 0 1px 8px black; /* goes x-axis, y-axis, blur, (stretch factor on x-axis, not used here), colour */
+}
+img:hover {
   box-shadow: 0 1px 8px black; /* goes x-axis, y-axis, blur, (stretch factor on x-axis, not used here), colour */
 }
 
@@ -118,4 +123,59 @@ img:hover {
   // padding: 20px;
   box-shadow: 0 3px 4px rgba(34, 25, 25, 0.4);
 
+}
+.show-img {
+  width: 70%;
+  border-radius: 5px;
+}
+.top-container {
+  height: 40px;
+}
+strong{
+  font-family: Quicksand;
+}
+.img-container {
+
+}
+.img-title{
+  font-size: 2.5em;
+  font-weight: 400;
+}
+.img-description{
+  // border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 70%;
+  border-radius: 5px;
+  background-color: #FFF5DE;
+}
+.img-description p {
+  line-height: 2;
+}
+.img-description-text{
+  font-size: 1.2em;
+}
+.img-description-text a{
+  font-size: 1.2em;
+  color: black;
+}
+.inner-comments{
+  border: 1px dotted grey;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+#comment-form label{
+  // padding-top: 10px;
+  margin-top: 20px;
+  // height: 30em;
+  // width: 100px;
+}
+#comment-form textarea{
+  height: 100px;
+  width: 90%;
+  margin-bottom: 5px;
+}
+#comments{
+margin-left: 0;
 }

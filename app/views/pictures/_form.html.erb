@@ -11,34 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
     <%= form.text_field :title, id: :picture_title %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :url %>
     <%= form.text_field :url, id: :picture_url %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :github %>
     <%= form.text_field :github, id: :picture_github %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
     <%= form.text_area :description, id: :picture_description %>
   </div>
 
 
   <!-- Removed this until we added likes feature -->
-  <!-- <div class="field">
+  <!-- <div class="form-group">
     <%= form.label :likes %>
     <%= form.number_field :likes, id: :picture_likes %>
   </div> -->
 
-  <div class="actions">
+  <div class=""form-group"">
     <%= form.submit %>
   </div>
 <% end %>
