@@ -31,7 +31,9 @@ body {
   flex-direction: column;
 }
 #header {
-  // background-color: #A1D9FF;
+  // background-color: #f8f8f8;
+  background-color: rgba(248, 248, 248, 0.6);
+  // opacity: 0.8;
   width: 90%;
   margin: 30px auto;
   text-align: center;
@@ -103,7 +105,7 @@ a:hover {
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
   padding: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   background-color: rgba(161, 217, 255, 0.8);
   opacity: 1;
   -webkit-transition: all .2s ease;
@@ -111,7 +113,7 @@ a:hover {
   -o-transition: all .2s ease;
   transition: all .2s ease;
   width: 40%;
-  height: 400px;
+  // height: 400px;
   border-radius: 5px;
 
   // text-align: center;
@@ -220,6 +222,10 @@ margin-bottom: 100px;
   width: 90%;
   margin-bottom: 5px;
 }
+.links {
+  padding: 20px;
+  font-size: 20px;
+}
 #comments{
 margin-left: 0;
 }
@@ -228,7 +234,7 @@ margin-left: 0;
   height: 100px;
   width: 100%;
   margin-bottom: 5px;
-  
+}
 .social a {
     padding: 10px 10px;
     // width: 30px;
