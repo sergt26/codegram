@@ -1,57 +1,92 @@
-<p id="notice"><%= notice %></p>
+<div class="top-container">
 
-<p>
-  <strong>Title:</strong>
-  <%= @picture.title %>
-</p>
+</div>
 
-<p>
-  <%= image_tag @picture.url %>
-</p>
+<div class="container img-container">
+  <p id="notice"><%= notice %></p>
 
 
-<p>
-  <strong>Github:</strong>
-  <a href="<%= @picture.github %>"><%= @picture.github %></a>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @picture.description %>
-</p>
-
-<p>
-  <strong>Likes:</strong>
-  <%= @picture.likes %>
-</p>
-
-<h2>Comments</h2>
-<% @picture.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
 
   <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
+    <%= image_tag @picture.url, :class => "show-img" %>
   </p>
-<% end %>
 
-<h2>Add a comment:</h2>
-  <%= form_for([@picture, @picture.comments.build]) do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+  <div class="img-description">
+    <p class="img-title">
+      <!-- <strong>Title:</strong> -->
+      <%= @picture.title %>
+    </p>
 
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+    <p class="img-description-text">
+      <strong><%= @picture.description %></strong>
+
+    </p>
+
+    <p class="img-description-text">
+      <strong>Click here for code:</strong>
+      <a target="_blank" href="<%= @picture.github %>"><%= @picture.github %></a>
+    </p>
+
+  </div>
+
+
+
+
+  <!-- <p>
+    <strong>Likes:</strong>
+    <%= @picture.likes %>
+  </p> -->
+
+
+  <div class="img-description" id="comment-form">
+    <h2 class="img-title">Add a comment:</h2>
+      <%= form_for([@picture, @picture.comments.build]) do |f| %>
+
+        <div class="form-group" id="comments">
+          <%= f.label :commenter, value="<h1>your name here</h1>"%>
+          <%= f.text_field :commenter %>
+
+
+          <%= f.label :body, value="<!--comment here-->" %>
+          <%= f.text_area :body %><br>
+
+          <%= f.submit %>
+
+        </div>
+
+
+
+
+
+    <% end %>
+  </div>
+
+  <div class="img-description">
+
+
+    <h2 class="img-title">Comments</h2>
+    <% @picture.comments.each do |comment| %>
+
+      <div class="inner-comments">
+        <p>
+          <strong>&lt;h1&gt;<%= comment.commenter %>&lt;/h1&gt;</strong>
+
+        </p>
+
+        <p>
+          <strong>&lt;!-- <%= comment.body %> --&gt;</strong>
+
+        </p>
+      </div>
+
+    <% end %>
+
+  </div>
+
+
+
+
+  <%= link_to 'Edit', edit_picture_path(@picture) %> |
+  <%= link_to 'Back', pictures_path %>
+
+</div>
