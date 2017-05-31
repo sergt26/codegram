@@ -224,8 +224,15 @@ margin-bottom: 100px;
 margin-left: 0;
 }
 
-.new-form textarea{
+.new-form textarea {
   height: 100px;
   width: 100%;
   margin-bottom: 5px;
+  
+.social a {
+    padding: 10px 10px;
+    // width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
 }
