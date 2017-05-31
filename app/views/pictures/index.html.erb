@@ -22,11 +22,15 @@
       <% @pictures.each do |picture| %>
       <div class="post">
             <%= picture.title %>
-            <%= image_tag picture.url %>
+            <a href="/pictures/<%= picture.id%>"><%= image_tag picture.url %></a>
+      <!-- <div class="middle">
+            <a href="/pictures/<%= picture.id%>"><i class="fa fa-search-plus fa-2x" aria-hidden="true"></i></a>
+      </div> -->
             <!-- <a href="<%= picture.github %>"><%= picture.github %></a> -->
             <%= picture.description %>
             <!-- <%= picture.likes %> -->
-            <%= link_to 'Show', picture %>
+            <!-- <%= link_to 'Show', picture %> -->
+
             <!-- <%= link_to 'Edit', edit_picture_path(picture) %></td>
             <%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
           </div>
