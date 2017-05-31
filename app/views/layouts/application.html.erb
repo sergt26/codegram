@@ -2,7 +2,9 @@
 <html>
   <head>
 
+
     <title>code</>gram</title>
+
     <%= csrf_meta_tags %>
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -12,7 +14,6 @@
   </head>
 
   <body>
-
     <nav class="nav navbar-default navbar-fixed-top" id="login">
       <div class="container-fluid">
 
@@ -22,7 +23,7 @@
           </a>
         </div>
 
-        <a class="glyphicon glyphicon-plus-sign new-pic" href="/pictures/new"></a>
+        <a class="glyphicon glyphicon-plus-sign fa-lg new-pic" href="/pictures/new"></a>
 
         <div id="navbar-right">
           <% if current_user %>
@@ -52,7 +53,24 @@
 
       </div>
     </nav> -->
+    <nav class="nav navbar-default navbar-fixed-bottom" id="bottom">
+      <div class="container-fluid">
+        <!-- <div class="navbar-header"> -->
+          <!-- <a href="/">
+            <%= image_tag("logo.png", :alt => "codegram logo", class: "logo")  %>
+          </a> -->
+        <!-- </div> -->
 
+        <div id="navbar-bottom-right">
+          <ul>
+            <a href="https://www.facebook.com"><li><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></li></a>
+            <a href="https://www.twitter.com"><li><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li></a>
+            <a href="https://www.github.com"><li><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></li></a>
+          </ul>
+        </div>
+      <!-- </div> -->
+    </div>
+  </nav>
 
 
     <%= yield %>

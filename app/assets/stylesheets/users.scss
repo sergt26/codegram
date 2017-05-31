@@ -1,10 +1,16 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 body {
-  background: #757F9A;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: url(https://static1.squarespace.com/static/501bc155c4aaab201611329c/t/56a971bb76d99c20662e01f4/1453945277317/code.jpg?format=1500w) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  // background: #757F9A;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to bottom, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to bottom, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -46,10 +52,10 @@ body {
   height: 3em;
   // background-color: white;
   text-align: right;
-
   // margin:  0 50px 0;
   padding-top: 15px;
   border-bottom: 1.5px solid lightgrey;
+  opacity: 0.9;
 }
 .label{
   color: black;
@@ -72,7 +78,7 @@ a:hover {
   // justify-content: flex-end;
 }
 .new-pic {
-  padding: 0 10px;
+  padding: 0 20px;
 }
 #navbar-left {
   float: left;
@@ -88,6 +94,7 @@ a:hover {
 }
 .post {
   // display: inline-block;
+  font-size: 1.3em;
   background: #FEFEFE;
   border: 2px solid #FAFAFA;
   box-shadow: 0 3px 4px rgba(34, 25, 25, 0.4);
@@ -105,11 +112,13 @@ a:hover {
   transition: all .2s ease;
   width: 40%;
   height: 400px;
+  border-radius: 5px;
 
   // text-align: center;
 }
 .post img:hover {
-  opacity: 0.1; /* 1 = 100%, 0 = 0% */
+
+  opacity: 0.3; /* 1 = 100%, 0 = 0% */
   /* or the drop-shadow effect */
   box-shadow: 0 1px 8px black; /* goes x-axis, y-axis, blur, (stretch factor on x-axis, not used here), colour */
 }
@@ -118,11 +127,42 @@ img:hover {
 }
 
 .post img {
+  margin: 10px;
   width: 400px;
   height: 300px;
   // padding: 20px;
   box-shadow: 0 3px 4px rgba(34, 25, 25, 0.4);
+  border-radius: 5px;
+}
 
+// .fa-search-plus {
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+// }
+.middle {
+  // transition: .5s ease;
+  opacity: 0;
+  // position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // -ms-transform: translate(-50%, -50%)
+}
+.container .middle {
+  opacity: 1;
+}
+#bottom {
+  opacity: 0.9;
+  height: 50px;
+}
+#navbar-bottom-right li {
+  display: inline-block;
+  float: right;
+  padding-right: 30px;
 }
 .show-img {
   width: 70%;
