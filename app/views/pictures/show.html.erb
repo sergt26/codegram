@@ -39,7 +39,7 @@
 
 
   <div class="img-description" id="comment-form">
-    <h2 class="img-title">Add a comment:</h2>
+    <h2 class="img-title">Add a &lt;!-- comment --&gt;</h2>
       <%= form_for([@picture, @picture.comments.build]) do |f| %>
 
         <div class="form-group" id="comments">
@@ -77,16 +77,20 @@
           <strong>&lt;!-- <%= comment.body %> --&gt;</strong>
 
         </p>
-      </div>
 
-    <% end %>
+
+
+      </div>
+      <% end %>
+
+      <%= link_to 'Edit', edit_picture_path(@picture) %> 
+      <% link_to 'Back', pictures_path %>
 
   </div>
 
 
 
 
-  <%= link_to 'Edit', edit_picture_path(@picture) %> |
-  <%= link_to 'Back', pictures_path %>
+
 
 </div>

@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :picture_title %>
+  <div class="form-group new-form">
+    <label for="picture_title" class="label" >Post title:</label>
+    <%= form.text_field :title, :class => "form-control", :placeholder => "post title", :id => "picture_title" %>
   </div>
 
-  <div class="form-group">
-    <%= form.label :url %>
-    <%= form.text_field :url, id: :picture_url %>
+  <div class="form-group new-form">
+    <label for="picture_url" class="label" >Picture url:</label>
+      <%= form.text_field :url, :class => "form-control", :placeholder => "picture url", :id => "picture_url" %>
   </div>
 
-  <div class="form-group">
-    <%= form.label :github %>
-    <%= form.text_field :github, id: :picture_github %>
+  <div class="form-group  new-form">
+    <label for="github_url" class="label" >Github repo URL:</label>
+    <%= form.text_field :github, :class => "form-control", :placeholder => "github url", :id => "github_url" %>
   </div>
 
-  <div class="form-group">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :picture_description %>
+  <div class="form-group new-form">
+    <label for="description_box" class="label" >Description:</label>
+    <%= form.text_area :description, :class => "form-control", :placeholder => "description", :id => "description_box" %>
   </div>
 
 
@@ -38,7 +38,7 @@
     <%= form.number_field :likes, id: :picture_likes %>
   </div> -->
 
-  <div class=""form-group"">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit",   :class => "btn btn-default"%>
   </div>
 <% end %>

@@ -21,7 +21,7 @@
 
       <% @pictures.each do |picture| %>
       <div class="post">
-            <%= picture.title %>
+            <p class="post-title"><%= picture.title %></p>  
             <a href="/pictures/<%= picture.id%>"><%= image_tag picture.url %></a>
       <!-- <div class="middle">
             <a href="/pictures/<%= picture.id%>"><i class="fa fa-search-plus fa-2x" aria-hidden="true"></i></a>
